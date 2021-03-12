@@ -29,6 +29,6 @@ namespace Ardalis.SmartEnum.MessagePack
                 }
             }
 #pragma warning restore S3963 // "static" fields should be initialized inline
-        }    
+        }
     }
 }

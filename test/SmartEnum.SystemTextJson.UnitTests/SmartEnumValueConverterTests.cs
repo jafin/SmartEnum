@@ -67,7 +67,7 @@ namespace Ardalis.SmartEnum.SystemTextJson.UnitTests
         [Fact]
         public void DeserializesNullByDefault()
         {
-            string json = @"{}";
+            string json = "{}";
 
             var obj = JsonSerializer.Deserialize<TestClass>(json);
 
@@ -87,19 +87,19 @@ namespace Ardalis.SmartEnum.SystemTextJson.UnitTests
 
             act.Should()
                 .Throw<JsonException>()
-                .WithMessage($@"Error converting value 'False' to a smart enum.")
+                .WithMessage("Error converting value 'False' to a smart enum.")
                 .WithInnerException<SmartEnumNotFoundException>()
-                .WithMessage($@"No {nameof(TestEnumBoolean)} with Value False found.");
+                .WithMessage($"No {nameof(TestEnumBoolean)} with Value False found.");
         }
 
         public static TheoryData<string, string> NotValidData =>
             new TheoryData<string, string>
             {
-                { @"{ ""Bool"": 1 }", @"Cannot get the value of a token type 'Number' as a boolean." },
-                { @"{ ""Int16"": true }", @"Cannot get the value of a token type 'True' as a number." },
-                { @"{ ""Int32"": true }", @"Cannot get the value of a token type 'True' as a number." },
-                { @"{ ""Double"": true }", @"Cannot get the value of a token type 'True' as a number." },
-                { @"{ ""String"": true }", @"Cannot get the value of a token type 'True' as a string." },
+                { @"{ ""Bool"": 1 }", "Cannot get the value of a token type 'Number' as a boolean." },
+                { @"{ ""Int16"": true }", "Cannot get the value of a token type 'True' as a number." },
+                { @"{ ""Int32"": true }", "Cannot get the value of a token type 'True' as a number." },
+                { @"{ ""Double"": true }", "Cannot get the value of a token type 'True' as a number." },
+                { @"{ ""String"": true }", "Cannot get the value of a token type 'True' as a string." },
             };
 
         [Theory]

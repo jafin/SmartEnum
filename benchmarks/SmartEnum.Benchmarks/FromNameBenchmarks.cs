@@ -7,8 +7,6 @@ namespace Ardalis.SmartEnum.Benchmarks
     [Config(typeof(Config))]
     public class FromNameBenchmarks
     {
-
-
         ////////////////////////////////////////////////////////////////////////////////
         // Enum
 
@@ -36,7 +34,6 @@ namespace Ardalis.SmartEnum.Benchmarks
 
         [Benchmark]
         public TestEnum Enum_FromName_ten_IgnoreCase() => Enum.Parse<TestEnum>("ten", true);
-
 
         [Benchmark]
         public TestEnum Enum_FromName_Invalid_IgnoreCase()
@@ -166,7 +163,6 @@ namespace Ardalis.SmartEnum.Benchmarks
         [Benchmark]
         public TestSmartEnum SmartEnum_FromName_ten_IgnoreCase() => TestSmartEnum.FromName("ten", true);
 
-
         [Benchmark]
         public TestSmartEnum SmartEnum_FromName_Invalid_IgnoreCase()
         {
@@ -227,6 +223,5 @@ namespace Ardalis.SmartEnum.Benchmarks
                 return result;
             return null;
         }
-
     }
 }

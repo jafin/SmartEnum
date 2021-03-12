@@ -2,7 +2,6 @@
 
 namespace Ardalis.SmartEnum.UnitTests
 {
-
     public class TestEnum : SmartEnum<TestEnum>
     {
         public static readonly TestEnum One = new TestEnum(1);

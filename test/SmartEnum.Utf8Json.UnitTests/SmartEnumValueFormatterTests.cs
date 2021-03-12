@@ -66,7 +66,7 @@ namespace Ardalis.SmartEnum.Utf8Json.UnitTests
         [Fact]
         public void DeserializesNullByDefault()
         {
-            string json = @"{}";
+            string json = "{}";
 
             var obj = JsonSerializer.Deserialize<TestClass>(json);
 
@@ -98,16 +98,16 @@ namespace Ardalis.SmartEnum.Utf8Json.UnitTests
 
             act.Should()
                 .Throw<SmartEnumNotFoundException>()
-                .WithMessage($@"No {nameof(TestEnumBoolean)} with Value False found.");
+                .WithMessage($"No {nameof(TestEnumBoolean)} with Value False found.");
         }
 
         public static TheoryData<string, string> NotValidData =>
             new TheoryData<string, string>
             {
-                { @"{ ""Bool"": 1 }", @"expected:'true | false', actual:'1', at offset:10" },
-                { @"{ ""Int16"": true }", @"expected:'Number Token', actual:'true', at offset:11" },
-                { @"{ ""Int32"": true }", @"expected:'Number Token', actual:'true', at offset:11" },
-                { @"{ ""Double"": true }", @"expected:'Number Token', actual:'true', at offset:12" },
+                { @"{ ""Bool"": 1 }", "expected:'true | false', actual:'1', at offset:10" },
+                { @"{ ""Int16"": true }", "expected:'Number Token', actual:'true', at offset:11" },
+                { @"{ ""Int32"": true }", "expected:'Number Token', actual:'true', at offset:11" },
+                { @"{ ""Double"": true }", "expected:'Number Token', actual:'true', at offset:12" },
             };
 
         [Theory]

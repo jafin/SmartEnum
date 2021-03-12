@@ -66,7 +66,7 @@ namespace Ardalis.SmartEnum.Utf8Json.UnitTests
         [Fact]
         public void DeserializesNullByDefault()
         {
-            string json = @"{}";
+            string json = "{}";
 
             var obj = JsonSerializer.Deserialize<TestClass>(json);
 
@@ -75,7 +75,6 @@ namespace Ardalis.SmartEnum.Utf8Json.UnitTests
             obj.Int32.Should().BeNull();
             obj.Double.Should().BeNull();
         }
-
 
         [Fact]
         public void DeserializeNull()

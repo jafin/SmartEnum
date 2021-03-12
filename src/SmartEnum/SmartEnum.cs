@@ -1,4 +1,4 @@
-﻿namespace Ardalis.SmartEnum
+namespace Ardalis.SmartEnum
 {
     using System;
     using System.Collections.Generic;
@@ -120,11 +120,11 @@
         /// <param name="name">The name of the item to get.</param>
         /// <param name="ignoreCase"><c>true</c> to ignore case during the comparison; otherwise, <c>false</c>.</param>
         /// <returns>
-        /// The item associated with the specified name. 
+        /// The item associated with the specified name.
         /// If the specified name is not found, throws a <see cref="KeyNotFoundException"/>.
         /// </returns>
-        /// <exception cref="ArgumentException"><paramref name="name"/> is <c>null</c>.</exception> 
-        /// <exception cref="SmartEnumNotFoundException"><paramref name="name"/> does not exist.</exception> 
+        /// <exception cref="ArgumentException"><paramref name="name"/> is <c>null</c>.</exception>
+        /// <exception cref="SmartEnumNotFoundException"><paramref name="name"/> does not exist.</exception>
         /// <seealso cref="SmartEnum{TEnum, TValue}.TryFromName(string, out TEnum)"/>
         /// <seealso cref="SmartEnum{TEnum, TValue}.TryFromName(string, bool, out TEnum)"/>
         public static TEnum FromName(string name, bool ignoreCase = false)
@@ -152,12 +152,12 @@
         /// </summary>
         /// <param name="name">The name of the item to get.</param>
         /// <param name="result">
-        /// When this method returns, contains the item associated with the specified name, if the key is found; 
+        /// When this method returns, contains the item associated with the specified name, if the key is found;
         /// otherwise, <c>null</c>. This parameter is passed uninitialized.</param>
         /// <returns>
         /// <c>true</c> if the <see cref="SmartEnum{TEnum, TValue}"/> contains an item with the specified name; otherwise, <c>false</c>.
         /// </returns>
-        /// <exception cref="ArgumentException"><paramref name="name"/> is <c>null</c>.</exception> 
+        /// <exception cref="ArgumentException"><paramref name="name"/> is <c>null</c>.</exception>
         /// <seealso cref="SmartEnum{TEnum, TValue}.FromName(string, bool)"/>
         /// <seealso cref="SmartEnum{TEnum, TValue}.TryFromName(string, bool, out TEnum)"/>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -170,12 +170,12 @@
         /// <param name="name">The name of the item to get.</param>
         /// <param name="ignoreCase"><c>true</c> to ignore case during the comparison; otherwise, <c>false</c>.</param>
         /// <param name="result">
-        /// When this method returns, contains the item associated with the specified name, if the name is found; 
+        /// When this method returns, contains the item associated with the specified name, if the name is found;
         /// otherwise, <c>null</c>. This parameter is passed uninitialized.</param>
         /// <returns>
         /// <c>true</c> if the <see cref="SmartEnum{TEnum, TValue}"/> contains an item with the specified name; otherwise, <c>false</c>.
         /// </returns>
-        /// <exception cref="ArgumentException"><paramref name="name"/> is <c>null</c>.</exception> 
+        /// <exception cref="ArgumentException"><paramref name="name"/> is <c>null</c>.</exception>
         /// <seealso cref="SmartEnum{TEnum, TValue}.FromName(string, bool)"/>
         /// <seealso cref="SmartEnum{TEnum, TValue}.TryFromName(string, out TEnum)"/>
         public static bool TryFromName(string name, bool ignoreCase, out TEnum result)
@@ -200,7 +200,7 @@
         /// The first item found that is associated with the specified value.
         /// If the specified value is not found, throws a <see cref="KeyNotFoundException"/>.
         /// </returns>
-        /// <exception cref="SmartEnumNotFoundException"><paramref name="value"/> does not exist.</exception> 
+        /// <exception cref="SmartEnumNotFoundException"><paramref name="value"/> does not exist.</exception>
         /// <seealso cref="SmartEnum{TEnum, TValue}.FromValue(TValue, TEnum)"/>
         /// <seealso cref="SmartEnum{TEnum, TValue}.TryFromValue(TValue, out TEnum)"/>
         public static TEnum FromValue(TValue value)
@@ -243,7 +243,7 @@
         /// </summary>
         /// <param name="value">The value of the item to get.</param>
         /// <param name="result">
-        /// When this method returns, contains the item associated with the specified value, if the value is found; 
+        /// When this method returns, contains the item associated with the specified value, if the value is found;
         /// otherwise, <c>null</c>. This parameter is passed uninitialized.</param>
         /// <returns>
         /// <c>true</c> if the <see cref="SmartEnum{TEnum, TValue}"/> contains an item with the specified name; otherwise, <c>false</c>.

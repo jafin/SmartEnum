@@ -32,7 +32,6 @@
             action.Should()
             .ThrowExactly<SmartEnumNotFoundException>()
             .WithMessage($"No {typeof(TestStringEnum).Name} with Value {value} found.");
-
         }
 
         [Fact]
